@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/anthony/Projects/High-Elo-Forum/forum/static'
+let g:netrw_dirhist_2='/Users/anthony/Projects/High-Elo-Forum/forum/templates'
+let g:netrw_dirhist_3='/Users/anthony/Projects/High-Elo-Forum/forum/templates/unused'
+let g:netrw_dirhist_4='/Users/anthony/Scripts'
+let g:netrw_dirhist_5='/Users/anthony/Documents/School/NLP/NLP/language_detector'
+let g:netrw_dirhist_6='/Users/anthony/Documents/School/NLP/NLP/pos_tagger'
