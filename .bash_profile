@@ -28,8 +28,15 @@ alias fgrep='fgrep --color=auto'
 alias df='df -h'
 
 alias c='clear'
+alias projects='cd ~/Projects'
 alias startforum='. ~/Scripts/start_HEF_server.sh'
 alias workonforum='. ~/Scripts/workonHEF.sh'
+alias push='git push -u origin master'
+
+# Load command line completion of git commands
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
 
 #Lets us see the gnu man pages
 alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
