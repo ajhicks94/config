@@ -31,7 +31,6 @@ alias c='clear'
 alias projects='cd ~/Projects'
 alias startforum='. ~/Scripts/start_HEF_server.sh'
 alias workonforum='. ~/Scripts/workonHEF.sh'
-alias push='git push -u origin master'
 
 # Load command line completion of git commands
 if [ -f ~/.git-completion.bash ]; then
