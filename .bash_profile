@@ -170,7 +170,7 @@ set_prompts() {
     PS1+="\[$reset$white\]: "
     PS1+="\[$green\]\w" # working directory
     PS1+="\$(prompt_git \"$white on $cyan\")" # git repository details
-    #PS1+="\n"
+    PS1+="\n"
     PS1+="\[$reset$white\]\$ \[$reset\]" # $ (and reset color)
 
     export PS1
@@ -178,3 +178,6 @@ set_prompts() {
 
 set_prompts
 unset set_prompts
+
+# added by Anaconda3 5.1.0 installer
+export PATH="/anaconda3/bin:$PATH"
