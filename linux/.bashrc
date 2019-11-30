@@ -1,13 +1,16 @@
-source ~/.alias || echo "Could not find ~/.alias"
+test -s ~/.alias &&source ~/.alias || echo "Could not find ~/.alias"
 
-local git_completion_path="/etc/bash_completion.d/git.sh"
-source $git_completion_path || echo "Could not find $git_completion_path"
+git_completion_path="/etc/bash_completion.d/git.sh"
+test -s $git_completion_path && source $git_completion_path || echo "Could not find $git_completion_path"
+unset git_completion_path
 
 #Sets color scheme for ls
-eval `dircolors ~/.dircolors`
+test -s "~/.dircolors" && eval `dircolors ~/.dircolors`
 
 # Some applications read the EDITOR variable to determine your favorite text editor.
 export EDITOR=/usr/bin/vim
+
+
 
 prompt_git() {
 	local s='';
