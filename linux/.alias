@@ -1,0 +1,28 @@
+# Aliases
+alias brc='vim ~/.bashrc'
+alias vrc='vim ~/.vimrc'
+alias refresh='source ~/.bashrc'
+alias ip='curl icanhazip.com'
+alias back='cd $OLDPWD'
+alias cp='cp -i'
+alias ln='ln -i'
+alias mv='mv -i'
+
+alias ls='ls --color=auto -A'
+alias ll='ls -l'
+alias lh='ls -lisAd .[^.]*'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+alias df='df -h'
+alias c='clear'
+
+alias gits='git status -u'

@@ -1,48 +1,13 @@
-export PATH=/usr/local/bin:$PATH
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+source ~/.alias || echo "Could not find ~/.alias"
 
-#Aliases
-alias bp='vim ~/.bash_profile'
-alias vrc='vim ~/.vim/.vimrc'
-alias refresh='source ~/.bash_profile'
-alias ip='curl icanhazip.com'
-alias back='cd $OLDPWD'
-alias cp='cp -i'
-alias ln='ln -i'
-alias mv='mv -i'
-
-alias ls='ls --color=auto -A'
-alias ll='ls -l'
-alias lh='ls -lisAd .[^.]*'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
-
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-
-alias df='df -h'
-
-alias c='clear'
-alias projects='cd ~/Projects'
-alias startforum='. ~/Scripts/start_HEF_server.sh'
-alias workonforum='. ~/Scripts/workonHEF.sh'
-
-# Load command line completion of git commands
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
-
-#Lets us see the gnu man pages
-alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
+local git_completion_path="/etc/bash_completion.d/git.sh"
+source $git_completion_path || echo "Could not find $git_completion_path"
 
 #Sets color scheme for ls
 eval `dircolors ~/.dircolors`
 
+# Some applications read the EDITOR variable to determine your favorite text editor.
+export EDITOR=/usr/bin/vim
 
 prompt_git() {
 	local s='';
@@ -178,6 +143,3 @@ set_prompts() {
 
 set_prompts
 unset set_prompts
-
-# added by Anaconda3 5.1.0 installer
-export PATH="/anaconda3/bin:$PATH"
